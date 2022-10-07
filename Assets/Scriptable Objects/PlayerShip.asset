@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerShip
   m_EditorClassIdentifier: 
   TotalHealth: 200
-  Speed: 5
+  Speed: 2.5
