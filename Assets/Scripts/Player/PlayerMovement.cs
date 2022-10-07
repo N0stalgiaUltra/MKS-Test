@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Rigidbody2D playerRB;
+    [SerializeField] private float speed;
+
     void Start()
     {
         
@@ -13,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float movx = Input.GetAxis("Horizontal");
+        float movy = Input.GetAxis("Vertical");
+
+        playerRB.velocity = new Vector2(movx * speed, movy * speed);
     }
+    
+    public float Speed { get { return speed; } set { speed = value; } }
 }
