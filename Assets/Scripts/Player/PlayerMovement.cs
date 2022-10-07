@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D playerRB;
-    [SerializeField] private float speed;
+    [SerializeField] private ShipData shipData;
+    private float speed;
 
     void Start()
     {
-        
+        speed = shipData.Speed;
     }
 
     // Update is called once per frame
@@ -18,8 +19,16 @@ public class PlayerMovement : MonoBehaviour
         float movx = Input.GetAxis("Horizontal");
         float movy = Input.GetAxis("Vertical");
 
-        playerRB.velocity = new Vector2(movx * speed, movy * speed);
+        playerRB.velocity = Vector2.right * movy * speed;
+
     }
-    
+
+    private void MoveForward()
+    {
+        
+    }
+
+ 
+
     public float Speed { get { return speed; } set { speed = value; } }
 }
