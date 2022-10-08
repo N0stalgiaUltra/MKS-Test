@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   Damage: 10
-  Speed: 0.5
+  Speed: 15

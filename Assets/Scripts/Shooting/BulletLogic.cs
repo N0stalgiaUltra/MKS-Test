@@ -20,24 +20,19 @@ public class BulletLogic : MonoBehaviour
         speed = data.Speed;
 
         this.transform.localPosition = bulletSpawn.position;
-        isMoving = false;
+        bulletRB.velocity = this.transform.localPosition * speed;
     }
 
-    void FixedUpdate()
+    private void OnEnable()
     {
-        // Reminder: Added the bullet prefab, bullet logic and Scriptable Object for bullets; 
-        //TODO: fix the rotation bug
-        if (gameObject.activeSelf)
-        {
-            bulletRB.AddForce(new Vector2(bulletSpawn.position.x, bulletSpawn.position.y) * (speed * Time.fixedDeltaTime), ForceMode2D.Impulse);
-        }
+        //if (!isMoving)
+        //{
+        //    bulletRB.velocity = this.transform.localPosition * speed;
+        //    isMoving = true;
+        //}
+        //if (!isMoving && bulletSpawn != null)
+        //    this.transform.localPosition = bulletSpawn.position;
     }
-
-    //private void OnEnable()
-    //{
-    //    if (!isMoving && bulletSpawn != null)
-    //        this.transform.localPosition = bulletSpawn.position;
-    //}
 
     private void ResetVelocity()
     {

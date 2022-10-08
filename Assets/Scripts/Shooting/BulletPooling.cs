@@ -38,9 +38,10 @@ public class BulletPooling : MonoBehaviour
     }
 
     public BulletLogic MultipleBulletSpawn(Transform[] bulletSpawns, bool isPlayer) { return null; }
-    public void ReplenishQueue()
+    
+    public void ReplenishQueue(BulletLogic bullet)
     {
-
+        
     }
 
 }
