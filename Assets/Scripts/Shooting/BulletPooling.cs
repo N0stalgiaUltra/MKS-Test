@@ -22,7 +22,7 @@ public class BulletPooling : MonoBehaviour
         }
     }
     
-    public BulletLogic SingleBulletSpawn(Transform bulletSpawn, bool isPlayer)
+    public void SingleBulletSpawn(Transform bulletSpawn, bool isPlayer)
     {
         if (bulletQueue.Count != 0)
         {
@@ -33,13 +33,18 @@ public class BulletPooling : MonoBehaviour
             aux.BulletSpawn = bulletSpawn;
             aux.gameObject.SetActive(true);
 
-            return aux;
         }
-        else
-            return null;
     }
 
-    public BulletLogic MultipleBulletSpawn(Transform[] bulletSpawns, bool isPlayer) { return null; }
+    public void MultipleBulletSpawn(Transform[] bulletSpawns, bool isPlayer) 
+    { 
+        if(bulletQueue.Count != 0)
+        {
+            for (int i = 0; i < bulletSpawns.Length; i++)
+                SingleBulletSpawn(bulletSpawns[i], isPlayer);
+           
+        }
+    }
     
 
     public void ReplenishQueue(GameObject bullet)

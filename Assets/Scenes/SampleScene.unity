@@ -196,7 +196,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a68adf5c4205c8a48964def8e8388f95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -281,7 +281,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a68adf5c4205c8a48964def8e8388f95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10588,7 +10588,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 1645837206}
-  bulletSpawn: {fileID: 1208521825}
+  frontalBulletSpawn: {fileID: 1208521825}
+  lateralBulletSpawns:
+  - {fileID: 533700793}
+  - {fileID: 319878974}
+  - {fileID: 2019882336}
 --- !u!1 &2019882335
 GameObject:
   m_ObjectHideFlags: 0
