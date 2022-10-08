@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 875614907694698377}
   - component: {fileID: 875614907694698378}
   - component: {fileID: 875614907694698379}
+  - component: {fileID: 4510883999813259430}
   m_Layer: 0
   m_Name: CannonBall
   m_TagString: Untagged
@@ -124,3 +125,16 @@ MonoBehaviour:
   speed: 0
   bulletSpawn: {fileID: 0}
   isMoving: 0
+--- !u!114 &4510883999813259430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875614907694698380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e79c848f81237c43b38987550f0aa66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPooling: {fileID: 0}

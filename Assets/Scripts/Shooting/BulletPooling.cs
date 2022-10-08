@@ -10,12 +10,14 @@ public class BulletPooling : MonoBehaviour
 
     private const string PlayerLayer = "PlayerBullets";
     private const string EnemyLayer = "EnemyBullets";
+    private const string DefaultLayer = "Default";
 
     private void Awake()
     {
         for (int i = 0; i < bulletsQuantity; i++)
         {
             BulletLogic aux = bulletFactory.GetNewInstance();
+            aux.gameObject.layer = LayerMask.NameToLayer(DefaultLayer);
             bulletQueue.Enqueue(aux);
         }
     }
@@ -39,9 +41,12 @@ public class BulletPooling : MonoBehaviour
 
     public BulletLogic MultipleBulletSpawn(Transform[] bulletSpawns, bool isPlayer) { return null; }
     
-    public void ReplenishQueue(BulletLogic bullet)
+
+    public void ReplenishQueue(GameObject bullet)
     {
-        
+        BulletLogic aux = bullet.GetComponent<BulletLogic>();
+        aux.ResetVelocity();
+        bulletQueue.Enqueue(aux);
     }
 
 }
