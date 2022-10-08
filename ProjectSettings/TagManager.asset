@@ -18,10 +18,10 @@ TagManager:
   - Sea
   - Islands
   - Ships
-  - Bullets
-  - 
-  - 
-  - 
+  - PlayerBullets
+  - Player
+  - EnemyBullets
+  - Enemy
   - 
   - 
   - 
