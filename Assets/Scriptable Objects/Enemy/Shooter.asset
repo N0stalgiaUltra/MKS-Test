@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2409814d49b75094995225f57e0f876c, type: 3}
+  m_Name: Shooter
+  m_EditorClassIdentifier: 
+  enemyShipData: {fileID: 11400000, guid: 84e00a4dc51fda34285e8164bac7e895, type: 2}
+  enemyBulletData: {fileID: 11400000, guid: b18aac11fb5bb58468c8529b46068d29, type: 2}
+  enemyType: 0
