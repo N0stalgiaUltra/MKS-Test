@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class ChaserMovement : MonoBehaviour
 {
     [SerializeField] private EnemyData enemyData;
     [SerializeField] private Rigidbody2D enemyRB;
 
-    [SerializeField] private Transform playerTransform;
+    private Transform playerTransform;
     private float speed;
     [SerializeField] private float rotateSpeed;
     void Start()

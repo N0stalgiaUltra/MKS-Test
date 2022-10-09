@@ -10034,10 +10034,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1846975332}
   - component: {fileID: 1846975331}
-  - component: {fileID: 1846975334}
   - component: {fileID: 1846975333}
+  - component: {fileID: 1846975337}
+  - component: {fileID: 1846975334}
+  - component: {fileID: 1846975336}
+  - component: {fileID: 1846975335}
   m_Layer: 12
-  m_Name: CrasherShip
+  m_Name: ChaserShip
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10145,8 +10148,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 03a613cffb8afa44e8a9de2aa53d796d, type: 2}
   enemyRB: {fileID: 1846975333}
-  playerTransform: {fileID: 0}
   rotateSpeed: 3
+--- !u!114 &1846975335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846975330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f49e343f5d62a74cbcb37b2733a5035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 1846975336}
+  shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
+  enemyType: 0
+--- !u!114 &1846975336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846975330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9efc8e7871b4fb40a1c71be202251d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charType: 1
+  shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
+--- !u!70 &1846975337
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846975330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0052538216, y: -0.02276647}
+  m_Size: {x: 0.37629497, y: 1.0844672}
+  m_Direction: 0
 --- !u!1001 &3085501515882751236
 PrefabInstance:
   m_ObjectHideFlags: 0
