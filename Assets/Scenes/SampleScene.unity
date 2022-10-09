@@ -10039,6 +10039,7 @@ GameObject:
   - component: {fileID: 1846975334}
   - component: {fileID: 1846975336}
   - component: {fileID: 1846975335}
+  - component: {fileID: 1846975338}
   m_Layer: 12
   m_Name: ChaserShip
   m_TagString: Enemy
@@ -10141,14 +10142,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846975330}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdc7fde3fe1ceba4aae7e116d4629733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 03a613cffb8afa44e8a9de2aa53d796d, type: 2}
-  enemyRB: {fileID: 1846975333}
   rotateSpeed: 3
+  shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
 --- !u!114 &1846975335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10194,6 +10194,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0052538216, y: -0.02276647}
   m_Size: {x: 0.37629497, y: 1.0844672}
   m_Direction: 0
+--- !u!114 &1846975338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846975330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617bbc952198c804ea3318c7052c5b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 3
+  maxDistance: 3
+  shipData: {fileID: 11400000, guid: 84e00a4dc51fda34285e8164bac7e895, type: 2}
 --- !u!1001 &3085501515882751236
 PrefabInstance:
   m_ObjectHideFlags: 0
