@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D playerRB;
     [SerializeField] private ShipData shipData;
-    private float speed;
+    [SerializeField] private float speed;
 
 
     void Start()
@@ -14,12 +14,14 @@ public class PlayerMovement : MonoBehaviour
         speed = shipData.Speed;
     }
 
+    
 
     // Update is called once per frame
     void FixedUpdate()
     {
 
-        playerRB.velocity = new Vector2 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
+        
+        playerRB.velocity = new Vector2 (Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed) ;
 
     }
 

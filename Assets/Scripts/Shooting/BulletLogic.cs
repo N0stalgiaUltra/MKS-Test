@@ -11,7 +11,7 @@ public class BulletLogic : MonoBehaviour
 
     private int damage;
     private float speed;
-    private Transform bulletSpawn;
+    [SerializeField] private Transform bulletSpawn;
 
     void Start()
     {
@@ -31,7 +31,8 @@ public class BulletLogic : MonoBehaviour
     private void AddVelocity()
     {
         this.transform.localPosition = bulletSpawn.position;
-        bulletRB.velocity = this.transform.localPosition * speed;
+        this.transform.rotation = bulletSpawn.rotation;
+        bulletRB.AddForce(this.transform.right * speed, ForceMode2D.Impulse);
     }
 
     public void ResetVelocity()

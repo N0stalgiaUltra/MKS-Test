@@ -10024,6 +10024,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1782245337 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6184231088286029474, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+  m_PrefabInstance: {fileID: 3085501515882751236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1846975330
 GameObject:
   m_ObjectHideFlags: 0
@@ -10046,7 +10051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1846975331
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10268,5 +10273,29 @@ PrefabInstance:
       propertyPath: bulletPool
       value: 
       objectReference: {fileID: 1645837206}
+    - target: {fileID: 3085501514098740841, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: frontalBulletSpawn
+      value: 
+      objectReference: {fileID: 1782245337}
+    - target: {fileID: 3085501514098740846, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085501515958285697, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085501515958285697, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1498043655
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085501515962306669, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085501515962306669, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1498043655
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
