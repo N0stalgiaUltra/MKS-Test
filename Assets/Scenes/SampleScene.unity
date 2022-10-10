@@ -1699,6 +1699,50 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1034318115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3085501514098740833, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+  m_PrefabInstance: {fileID: 3085501515882751236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1034318122 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3085501514098740834, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+  m_PrefabInstance: {fileID: 3085501515882751236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1034318124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034318115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9efc8e7871b4fb40a1c71be202251d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charType: 0
+  shipData: {fileID: 11400000, guid: 6190580482a78d34e85c0b362a89f33c, type: 2}
+  health: 0
+--- !u!114 &1034318125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034318115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c5e918101253247aee3d29c88927aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipSprites:
+  - {fileID: 21300000, guid: 9483e5c649e2f134e8e66fb639443995, type: 3}
+  - {fileID: 21300000, guid: 8d1b41155266d0f498329b1fa04fc12c, type: 3}
+  - {fileID: 21300000, guid: 8465daac654ee5946b4df723159eaabb, type: 3}
+  - {fileID: 21300000, guid: 5f1f977acec8fc34eb551ce9c4352122, type: 3}
+  healthController: {fileID: 1034318124}
+  shipSR: {fileID: 1034318122}
 --- !u!1 &1052744349
 GameObject:
   m_ObjectHideFlags: 0
@@ -10142,7 +10186,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846975330}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdc7fde3fe1ceba4aae7e116d4629733, type: 3}
   m_Name: 
@@ -10202,7 +10246,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846975330}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 617bbc952198c804ea3318c7052c5b1f, type: 3}
   m_Name: 
@@ -10269,5 +10313,13 @@ PrefabInstance:
       propertyPath: bulletPool
       value: 
       objectReference: {fileID: 1645837206}
+    - target: {fileID: 3085501514098740847, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: chaserData
+      value: 
+      objectReference: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
+    - target: {fileID: 3085501514098740847, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1034318124}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}

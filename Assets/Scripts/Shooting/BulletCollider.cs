@@ -9,12 +9,7 @@ public class BulletCollider : MonoBehaviour, ICollider
 
     private void Awake() => bulletPooling = gameObject.GetComponentInParent<BulletPooling>();
 
-    public void GetHit(string objectTag)
-    {
-        print(objectTag + this.gameObject.layer);
-        DeactivateBullet();
-    }
-
+    public void GetHit(string objectTag) => DeactivateBullet();
     public void OnBecameInvisible() => DeactivateBullet();
     private void DeactivateBullet()
     {

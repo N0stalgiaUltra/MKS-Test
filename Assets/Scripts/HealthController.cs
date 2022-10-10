@@ -40,4 +40,5 @@ public class HealthController : MonoBehaviour
         this.gameObject.SetActive(false);
     }
     
+    public int Health { get { return health; } }
 }

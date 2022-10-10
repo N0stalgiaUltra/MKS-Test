@@ -7,5 +7,6 @@ public class ShipData : ScriptableObject
 {
     public int TotalHealth;
     public float Speed;
+    public int CollisionDamage;
     
 }
