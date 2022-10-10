@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICollider 
 {
-    public void GetHit();
+    public void GetHit(string tag);
 }

@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 875614907694698376}
   - component: {fileID: 875614907694698377}
   - component: {fileID: 875614907694698378}
+  - component: {fileID: 957475070446008496}
   - component: {fileID: 875614907694698379}
   - component: {fileID: 4510883999813259430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CannonBall
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +109,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &957475070446008496
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875614907694698380}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.05
 --- !u!114 &875614907694698379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,9 +139,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: b18aac11fb5bb58468c8529b46068d29, type: 2}
   bulletRB: {fileID: 875614907694698378}
-  speed: 0
-  bulletSpawn: {fileID: 0}
-  isMoving: 0
 --- !u!114 &4510883999813259430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,4 +151,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e79c848f81237c43b38987550f0aa66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPooling: {fileID: 0}

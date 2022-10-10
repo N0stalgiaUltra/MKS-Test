@@ -12,13 +12,12 @@ public class HealthController : MonoBehaviour
 
     [SerializeField] private CharType charType;
     [SerializeField] private ShipData shipData;
-    private int health;
+    [SerializeField] private int health;
     void Start()
     {
         health = shipData.TotalHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (health <= 0)

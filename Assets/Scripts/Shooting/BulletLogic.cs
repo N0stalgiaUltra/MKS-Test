@@ -11,7 +11,7 @@ public class BulletLogic : MonoBehaviour
 
     private int damage;
     private float speed;
-    [SerializeField] private Transform bulletSpawn;
+    private Transform bulletSpawn;
 
     void Start()
     {

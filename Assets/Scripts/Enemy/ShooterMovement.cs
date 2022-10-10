@@ -24,6 +24,6 @@ public class ShooterMovement : EnemyMovement
 
     private void Shoot()
     {
-        Debug.Log("Shooting");
+        //Debug.Log("Shooting");
     }
 }
