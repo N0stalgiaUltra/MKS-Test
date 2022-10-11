@@ -12,6 +12,9 @@ public class SessionTimeUI : MonoBehaviour
     private int count = 1;
     void Start()
     {
+        if (!PlayerPrefs.GetInt("SessionTime").Equals(0))
+            count = PlayerPrefs.GetInt("SessionTime");
+
         addButton.onClick.AddListener(Add);
         subButton.onClick.AddListener(Sub);
 
@@ -34,11 +37,18 @@ public class SessionTimeUI : MonoBehaviour
     private void Add()
     {
         count++;
+        Save();
     }
 
     private void Sub()
     {
         count--;
+        Save();
+    }
+    private void Save()
+    {
+        PlayerPrefs.SetInt("SessionTime", count);
+        PlayerPrefs.Save();
     }
 }
 

@@ -13,6 +13,9 @@ public class EnemySpawnTimeUI : MonoBehaviour
     private int count = 3;
     void Start()
     {
+        if (!PlayerPrefs.GetInt("EnemySpawnTime").Equals(0))
+            count = PlayerPrefs.GetInt("EnemySpawnTime");
+
         addButton.onClick.AddListener(Add);
         subButton.onClick.AddListener(Sub);
 
@@ -35,10 +38,18 @@ public class EnemySpawnTimeUI : MonoBehaviour
     private void Add()
     {
         count++;
+        Save();
     }
 
     private void Sub()
     {
         count--;
+        Save();
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("EnemySpawnTime", count);
+        PlayerPrefs.Save();
     }
 }
