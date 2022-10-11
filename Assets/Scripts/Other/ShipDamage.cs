@@ -10,32 +10,29 @@ public class ShipDamage : MonoBehaviour
         CHASER,
         SHOOTER
     }
-    
-    [SerializeField] private Sprite[] shipSprites = new Sprite[3];
-    [SerializeField] private Sprite[] destroyedSprites = new Sprite[3];
+
+    [Header ("Script References")]
+    [SerializeField] private ShipSpriteData shipSpriteData;
     [SerializeField] private HealthController healthController;
+    [SerializeField] private DestroyedShip destroyedShip;
+
+    [Header ("Component References")]
     [SerializeField] private SpriteRenderer shipSR;
     [SerializeField] private ShipType shipType;
-    [SerializeField] private DestroyedShip destroyedShip;
-    private void Awake()
-    {
-        EnableComponents();
 
-    }
     void Start()
     {
-        shipSR.sprite = shipSprites[0];
+        shipSR.sprite = shipSpriteData.sprites[0];
     }
 
-    // Update is called once per frame
     void Update()
     {
 
         if(healthController.Health < 50)
-            shipSR.sprite = shipSprites[1];
+            shipSR.sprite = shipSpriteData.sprites[1];
 
         if (healthController.Health <= 25)
-            shipSR.sprite = shipSprites[2];
+            shipSR.sprite = shipSpriteData.sprites[2];
         
         if (healthController.Health <= 0)
         {
@@ -46,12 +43,9 @@ public class ShipDamage : MonoBehaviour
     public void DisableComponents() 
     {
         if(this.shipType.Equals(ShipType.CHASER))
-            Instantiate(destroyedShip, transform.position, transform.rotation).Setup(destroyedSprites[1]);
+            Instantiate(destroyedShip, transform.position, transform.rotation).Setup(shipSpriteData.damagedSprite);
 
     }
-    public void EnableComponents() 
-    {
 
-    }
 }
 
