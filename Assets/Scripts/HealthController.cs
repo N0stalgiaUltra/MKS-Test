@@ -12,6 +12,7 @@ public class HealthController : MonoBehaviour
 
     [SerializeField] private CharType charType;
     [SerializeField] private ShipData shipData;
+    [SerializeField] private ShipDamage shipDamage;
     [SerializeField] private int health;
     void Start()
     {
@@ -35,10 +36,22 @@ public class HealthController : MonoBehaviour
     private void Die()
     {
         if (this.charType == CharType.PLAYER)
-        { //TODO: set game over, replenish enemy queue
+        {
+            
         }
-        this.gameObject.SetActive(false);
+
+        StartCoroutine(DestroyShip());
     }
+    
+    IEnumerator DestroyShip()
+    {
+        GetComponent<Rigidbody2D>().Sleep();
+
+        yield return new WaitForSeconds(5f);
+        this.gameObject.SetActive(false);
+        // TODO: create method to replenish the enemy spawn 
+    }
+
     
     public int Health { get { return health; } }
 }

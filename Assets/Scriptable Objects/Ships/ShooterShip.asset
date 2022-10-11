@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2983d4e9ab437fc458e1950a7b09a41a, type: 3}
   m_Name: ShooterShip
   m_EditorClassIdentifier: 
-  TotalHealth: 75
+  TotalHealth: 90
   Speed: 1
+  CollisionDamage: 0

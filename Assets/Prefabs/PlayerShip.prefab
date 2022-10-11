@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 3085501514098740847}
   - component: {fileID: 3085501514098740840}
   - component: {fileID: 3085501514098740841}
+  - component: {fileID: 1034318124}
+  - component: {fileID: 1034318125}
   m_Layer: 10
   m_Name: PlayerShip
   m_TagString: Player
@@ -157,6 +159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 3085501514098740844}
+  playerHealth: {fileID: 1034318124}
+  chaserData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
+  bulletData: {fileID: 0}
 --- !u!114 &3085501514098740840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +193,41 @@ MonoBehaviour:
   - {fileID: 3085501515877664189}
   - {fileID: 3085501515663544890}
   - {fileID: 3085501514143895652}
+--- !u!114 &1034318124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3085501514098740833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9efc8e7871b4fb40a1c71be202251d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charType: 0
+  shipData: {fileID: 11400000, guid: 6190580482a78d34e85c0b362a89f33c, type: 2}
+  shipDamage: {fileID: 1034318125}
+  health: 0
+--- !u!114 &1034318125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3085501514098740833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c5e918101253247aee3d29c88927aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipSprites:
+  - {fileID: 21300000, guid: 9483e5c649e2f134e8e66fb639443995, type: 3}
+  - {fileID: 21300000, guid: 8d1b41155266d0f498329b1fa04fc12c, type: 3}
+  - {fileID: 21300000, guid: 8465daac654ee5946b4df723159eaabb, type: 3}
+  - {fileID: 21300000, guid: 5f1f977acec8fc34eb551ce9c4352122, type: 3}
+  healthController: {fileID: 1034318124}
+  shipSR: {fileID: 3085501514098740834}
 --- !u!1 &3085501514143895643
 GameObject:
   m_ObjectHideFlags: 0
