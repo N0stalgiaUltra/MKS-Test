@@ -6,13 +6,14 @@ public class ShooterMovement : EnemyMovement
 {
     [SerializeField] private float maxDistance;
     [SerializeField] private ShipData shipData;
+    [SerializeField] private EnemyShoot enemyShoot;
 
 
     // Update is called once per frame
     void Update()
     {
         if (Vector3.Distance(this.transform.position, playerTransform.position) <= maxDistance)
-            Shoot();
+            enemyShoot.Shoot();
         else
         {
             Move(shipData.Speed);
@@ -22,8 +23,5 @@ public class ShooterMovement : EnemyMovement
 
     }
 
-    private void Shoot()
-    {
-        //Debug.Log("Shooting");
-    }
+ 
 }

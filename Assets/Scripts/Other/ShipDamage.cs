@@ -40,12 +40,7 @@ public class ShipDamage : MonoBehaviour
         }
     }
 
-    public void DisableComponents() 
-    {
-        if(this.shipType.Equals(ShipType.CHASER))
-            Instantiate(destroyedShip, transform.position, transform.rotation).Setup(shipSpriteData.damagedSprite);
-
-    }
+    public void DisableComponents() => Instantiate(destroyedShip, transform.position, transform.rotation).Setup(shipSpriteData.damagedSprite);
 
 }
 

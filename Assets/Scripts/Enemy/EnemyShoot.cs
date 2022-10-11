@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private BulletPooling bulletPool;
+    [SerializeField] private Transform bulletSpawn;
+    [SerializeField] private float fireRate;
+    private float nextFire;
+    private void Awake()
     {
-        
+        bulletPool = GameObject.FindGameObjectWithTag("BulletPool").GetComponent<BulletPooling>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        nextFire -= Time.deltaTime;
+    }
+    public void Shoot()
+    {
+        if(nextFire <= 0) 
+        {
+            bulletPool.SingleBulletSpawn(bulletSpawn, false);
+            nextFire = fireRate;
+        }
     }
 }

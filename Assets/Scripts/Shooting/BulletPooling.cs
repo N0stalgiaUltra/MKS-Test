@@ -49,7 +49,6 @@ public class BulletPooling : MonoBehaviour
 
     public void ReplenishQueue(GameObject bullet)
     {
-        //bullet.layer = LayerMask.NameToLayer(DefaultLayer);
         BulletLogic aux = bullet.GetComponent<BulletLogic>();
         aux.ResetVelocity();
         bulletQueue.Enqueue(aux);

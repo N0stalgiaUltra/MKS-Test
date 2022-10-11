@@ -224,9 +224,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipSpriteData: {fileID: 11400000, guid: 4e846abe65ccaa347a37b276045af661, type: 2}
   healthController: {fileID: 1034318124}
+  destroyedShip: {fileID: 1230487709590724417, guid: 6517bb173ae85d548b2eb37ad5d3abf6, type: 3}
   shipSR: {fileID: 3085501514098740834}
   shipType: 0
-  destroyedShip: {fileID: 1230487709590724417, guid: 6517bb173ae85d548b2eb37ad5d3abf6, type: 3}
 --- !u!1 &3085501514143895643
 GameObject:
   m_ObjectHideFlags: 0
