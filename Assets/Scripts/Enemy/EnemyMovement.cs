@@ -7,12 +7,8 @@ public abstract class EnemyMovement : MonoBehaviour
     protected Transform playerTransform;
 
     [SerializeField] protected float rotateSpeed;
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        print("Started Enemy Movement");
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
 
     }

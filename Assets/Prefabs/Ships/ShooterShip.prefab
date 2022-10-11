@@ -324,3 +324,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 0}
   bulletSpawn: {fileID: 4832557809442109792}
+  fireRate: 1.75
