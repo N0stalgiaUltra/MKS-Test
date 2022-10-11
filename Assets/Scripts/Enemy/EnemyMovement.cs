@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class EnemyMovement : MonoBehaviour
 {
     protected Transform playerTransform;
+
     [SerializeField] protected float rotateSpeed;
 
 

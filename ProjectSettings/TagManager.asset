@@ -48,3 +48,6 @@ TagManager:
   - name: Ships
     uniqueID: 1498043655
     locked: 0
+  - name: Animations
+    uniqueID: 197584339
+    locked: 0
