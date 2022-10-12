@@ -16,7 +16,16 @@ public class HealthController : MonoBehaviour
     [SerializeField] private int health;
 
     [SerializeField] private GameObject explosionAnimation;
+    
+    
+    [SerializeField] private EnemyPooling enemyPooling;
     private bool isDestroyed;
+
+    private void Awake()
+    {
+        if(charType == CharType.ENEMY)
+            enemyPooling = FindObjectOfType<EnemyPooling>();
+    }
     void Start()
     {
         health = shipData.TotalHealth;
@@ -42,11 +51,16 @@ public class HealthController : MonoBehaviour
     {
         isDestroyed = true;
         Instantiate(explosionAnimation, this.transform.position, this.transform.rotation);
+        shipDamage.InstantiateDestroyedShip();
         this.gameObject.SetActive(false);
 
         if (this.charType == CharType.PLAYER)
         {
-            
+            // TODO : ADD GAMEOVER AND SET SCORE
+        }
+        else
+        {
+            enemyPooling.ReplenishQueue(this.gameObject);
         }
     }
     

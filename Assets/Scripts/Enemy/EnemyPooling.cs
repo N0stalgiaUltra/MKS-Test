@@ -28,7 +28,10 @@ public class EnemyPooling : MonoBehaviour
     {
         nextSpawn -= Time.deltaTime;
         if (nextSpawn <= 0)
+        {
             EnemySpawn(enemySpawns[Random.Range(0, enemySpawns.Length)]);
+            nextSpawn = spawnTime;
+        }
     }
 
     public void EnemySpawn(Transform enemySpawn)
@@ -41,8 +44,6 @@ public class EnemyPooling : MonoBehaviour
             aux.SetActive(true);
         }
     }
-    public void ReplenishQueue(GameObject enemy)
-    {
-        enemyQueue.Enqueue(enemy);
-    }
+    public void ReplenishQueue(GameObject enemy) => enemyQueue.Enqueue(enemy);
+
 }
