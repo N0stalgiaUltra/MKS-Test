@@ -23,7 +23,6 @@ public class EnemyPooling : MonoBehaviour
         nextSpawn = spawnTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         nextSpawn -= Time.deltaTime;
