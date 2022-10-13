@@ -16,15 +16,17 @@ public class HealthController : MonoBehaviour
     [SerializeField] private int health;
 
     [SerializeField] private GameObject explosionAnimation;
-    
-    
-    [SerializeField] private EnemyPooling enemyPooling;
+
+    private GameManager gameManager;
+    private EnemyPooling enemyPooling;
     private bool isDestroyed;
 
     private void Awake()
     {
-        if(charType == CharType.ENEMY)
+        if (charType == CharType.ENEMY)
             enemyPooling = FindObjectOfType<EnemyPooling>();
+        else
+            gameManager = FindObjectOfType<GameManager>();
     }
     void Start()
     {
@@ -59,7 +61,7 @@ public class HealthController : MonoBehaviour
 
         if (this.charType == CharType.PLAYER)
         {
-            // TODO : ADD GAMEOVER AND SET SCORE
+            gameManager.GameOver();
         }
         else
         {
