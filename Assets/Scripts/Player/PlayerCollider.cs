@@ -11,7 +11,6 @@ public class PlayerCollider : MonoBehaviour, ICollider
     [SerializeField] private BulletData bulletData;
     public void GetCollision(string tag)
     {
-        print(tag);
         if(tag.Equals("Island"))
             playerMovement.Speed = 0f;
 
@@ -25,11 +24,11 @@ public class PlayerCollider : MonoBehaviour, ICollider
             playerHealth.Damage(bulletData.Damage);
     }
 
-    public void OutCollision(string tag) { print(playerMovement.Speed); playerMovement.Speed = playerData.Speed; }
+    public void OutCollision() =>  playerMovement.Speed = playerData.Speed; 
 
     private void OnCollisionEnter2D(Collision2D collision) => GetCollision(collision.gameObject.tag);
 
     private void OnTriggerEnter2D(Collider2D collision) => GetCollision(collision.tag);
-    private void OnTriggerExit2D(Collider2D collision) => OutCollision(collision.gameObject.tag);
+    private void OnTriggerExit2D(Collider2D collision) => OutCollision();
 
 }

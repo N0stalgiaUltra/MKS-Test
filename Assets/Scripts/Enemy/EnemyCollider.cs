@@ -55,9 +55,8 @@ public class EnemyCollider : MonoBehaviour, ICollider
             enemyHealth.Damage(damage);
     }
 
-    public void OutCollision(string tag)
+    public void OutCollision()
     {
-        print("sai de colisao");
         ChangeEnemySpeed(shipData.Speed);
     }
     private void ChangeEnemySpeed(float newSpeed)
@@ -80,6 +79,6 @@ public class EnemyCollider : MonoBehaviour, ICollider
         GetCollision(collision.gameObject.tag);
     }
 
-    private void OnTriggerExit2D(Collider2D collision) => OutCollision(collision.gameObject.tag);
+    private void OnTriggerExit2D(Collider2D collision) => OutCollision();
 
 }
