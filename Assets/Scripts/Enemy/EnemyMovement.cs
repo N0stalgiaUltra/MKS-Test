@@ -4,18 +4,17 @@ using UnityEngine;
 
 public abstract class EnemyMovement : MonoBehaviour
 {
-    protected Transform playerTransform;
+    [SerializeField] protected Transform playerTransform;
 
     [SerializeField] protected float rotateSpeed;
     void Start()
     {
-        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-
+        playerTransform = GameObject.Find("PlayerShip").GetComponent<Transform>();
     }
 
-    protected void Move(float speed)
+    protected void Move(float enemySpeed)
     {
-        transform.position = Vector3.MoveTowards(this.transform.position, playerTransform.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, enemySpeed * Time.deltaTime);
     }
 
     protected virtual void Rotate()

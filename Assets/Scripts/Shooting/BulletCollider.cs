@@ -9,7 +9,7 @@ public class BulletCollider : MonoBehaviour, ICollider
 
     private void Awake() => bulletPooling = gameObject.GetComponentInParent<BulletPooling>();
 
-    public void GetHit(string objectTag) => DeactivateBullet();
+    public void GetCollision(string objectTag) => DeactivateBullet();
     public void OnBecameInvisible() => DeactivateBullet();
     private void DeactivateBullet()
     {
@@ -18,6 +18,8 @@ public class BulletCollider : MonoBehaviour, ICollider
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetHit(collision.tag);
+        GetCollision(collision.tag);
     }
+
+
 }

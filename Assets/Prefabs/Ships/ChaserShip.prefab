@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc7fde3fe1ceba4aae7e116d4629733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 3085501514098740835, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
   rotateSpeed: 3
   shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
 --- !u!114 &4327747266650412195
@@ -159,7 +160,6 @@ MonoBehaviour:
   shipDamage: {fileID: 4327747266650412193}
   health: 0
   explosionAnimation: {fileID: 8879425611519450599, guid: 5adcb48bda75ea34d83fff8a8e44ece9, type: 3}
-  enemyPooling: {fileID: 0}
 --- !u!114 &4327747266650412204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   enemyHealth: {fileID: 4327747266650412195}
   shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
   enemyType: 0
+  enemySpeed: 0
 --- !u!114 &4327747266650412193
 MonoBehaviour:
   m_ObjectHideFlags: 0

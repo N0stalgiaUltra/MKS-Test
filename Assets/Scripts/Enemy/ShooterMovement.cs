@@ -7,8 +7,13 @@ public class ShooterMovement : EnemyMovement
     [SerializeField] private float maxDistance;
     [SerializeField] private ShipData shipData;
     [SerializeField] private EnemyShoot enemyShoot;
+    private float speed;
 
+    private void Awake()
+    {
+        speed = shipData.Speed;
 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -16,12 +21,13 @@ public class ShooterMovement : EnemyMovement
             enemyShoot.Shoot();
         else
         {
-            Move(shipData.Speed);
+            Move(speed);
         }
 
         Rotate();
 
     }
+    public float Speed { get { return speed; } set { speed = value; } }
 
- 
+
 }

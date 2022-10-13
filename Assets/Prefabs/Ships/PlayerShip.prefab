@@ -211,7 +211,6 @@ MonoBehaviour:
   shipDamage: {fileID: 1034318125}
   health: 0
   explosionAnimation: {fileID: 8879425611519450599, guid: 5adcb48bda75ea34d83fff8a8e44ece9, type: 3}
-  enemyPooling: {fileID: 0}
 --- !u!114 &1034318125
 MonoBehaviour:
   m_ObjectHideFlags: 0

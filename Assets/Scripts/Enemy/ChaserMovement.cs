@@ -5,12 +5,17 @@ using UnityEngine;
 public class ChaserMovement : EnemyMovement
 {
     [SerializeField] private ShipData shipData;
-    
-    void Update()
+    private float speed;
+    private void Awake()
     {
-        Move(shipData.Speed);
+        speed = shipData.Speed;
+    }
+    private void Update()
+    {
+        Move(speed);
         Rotate();
     }
     
+    public float Speed { get { return speed; } set { speed = value; } }
 
 }

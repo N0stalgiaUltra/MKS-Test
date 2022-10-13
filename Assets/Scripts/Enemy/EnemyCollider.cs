@@ -12,10 +12,39 @@ public class EnemyCollider : MonoBehaviour, ICollider
     [SerializeField] private HealthController enemyHealth;
     [SerializeField] private ShipData shipData;
     [SerializeField] private EnemyType enemyType;
-
+    private ChaserMovement chaserMovement;
+    private ShooterMovement shooterMovement;
+    private float enemySpeed;
     private int damage;
-    public void GetHit(string objectTag)
+
+    private void Start()
     {
+        if (this.enemyType == EnemyType.CHASER)
+        {
+            chaserMovement = GetComponent<ChaserMovement>();
+        }
+        else
+        {
+            shooterMovement = GetComponent<ShooterMovement>();
+
+        }
+        enemySpeed = shipData.Speed;
+    }
+
+    public void GetCollision(string objectTag)
+    {
+        if (objectTag.Equals("Island"))
+        {
+            ChangeEnemySpeed(0f);
+
+        }
+
+        if (objectTag.Equals("Sea"))
+        {
+            ChangeEnemySpeed(enemySpeed /= 2f);
+        }
+
+
         if (objectTag.Equals("Player"))
         {
             if (this.enemyType == EnemyType.CHASER)
@@ -24,10 +53,23 @@ public class EnemyCollider : MonoBehaviour, ICollider
 
         if (objectTag.Equals("Bullet"))
             enemyHealth.Damage(damage);
-        // TODO: Set Explosion Animation, Eliminate
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) => GetHit(collision.gameObject.tag);
+    public void OutCollision(string tag)
+    {
+        print("sai de colisao");
+        ChangeEnemySpeed(shipData.Speed);
+    }
+    private void ChangeEnemySpeed(float newSpeed)
+    {
+        print(newSpeed);
+        if (this.enemyType == EnemyType.CHASER)
+            chaserMovement.Speed = newSpeed;
+        else
+            shooterMovement.Speed = newSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) => GetCollision(collision.gameObject.tag);
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,6 +77,9 @@ public class EnemyCollider : MonoBehaviour, ICollider
         if (collision.gameObject.CompareTag("Bullet"))
             damage = collision.gameObject.GetComponent<BulletLogic>().Damage;
 
-        GetHit(collision.gameObject.tag);
+        GetCollision(collision.gameObject.tag);
     }
+
+    private void OnTriggerExit2D(Collider2D collision) => OutCollision(collision.gameObject.tag);
+
 }
