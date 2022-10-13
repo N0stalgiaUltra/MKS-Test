@@ -59,7 +59,7 @@ public class HealthController : MonoBehaviour
         shipDamage.InstantiateDestroyedShip();
         this.gameObject.SetActive(false);
 
-        if (this.charType == CharType.PLAYER)
+        if (charType == CharType.PLAYER)
         {
             gameManager.GameOver();
         }
@@ -67,9 +67,8 @@ public class HealthController : MonoBehaviour
         {
             enemyPooling.ReplenishQueue(this.gameObject);
         }
-    }
-    
 
-    
+    }
+
     public int Health { get { return health; } }
 }

@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private float gameSessionTimer;
+    [SerializeField] private GameObject gameOverScreen;
     void Start()
     {
         Time.timeScale = 1;
@@ -20,17 +21,22 @@ public class GameManager : MonoBehaviour
     }
     private void CheckTimer()
     {
-        
         gameSessionTimer -= Time.deltaTime;
 
         if (gameSessionTimer <= 0)
             GameOver();
     }
+    private IEnumerator GameOverDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        scoreManager.SaveScore();
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0;
+
+    }
     public void GameOver()
     {
-        scoreManager.SaveScore();
-        Time.timeScale = 0;
+        StartCoroutine(GameOverDelay());
     }
 
-    //public int GameSessionTimer { get { return gameSessionTimer; } }
 }

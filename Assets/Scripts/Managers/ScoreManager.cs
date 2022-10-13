@@ -38,4 +38,6 @@ public class ScoreManager : MonoBehaviour
         }
     }
     
+    public int Score { get { return score; } }
+    public int Highscore { get { return highScore; } }
 }
