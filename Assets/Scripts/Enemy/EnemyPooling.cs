@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyPooling : MonoBehaviour
 {
+
     [SerializeField] private EnemyFactory enemyFactory;
+    [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private int enemiesQuantity;
     [SerializeField] private Queue<GameObject> enemyQueue = new Queue<GameObject>();
     [SerializeField] private Transform[] enemySpawns = new Transform[3];
@@ -43,6 +45,12 @@ public class EnemyPooling : MonoBehaviour
             aux.SetActive(true);
         }
     }
-    public void ReplenishQueue(GameObject enemy) => enemyQueue.Enqueue(enemy);
+    public void ReplenishQueue(GameObject enemy)
+    {
+        enemy.GetComponent<HealthController>().SetHealth();
+        enemyQueue.Enqueue(enemy);
+        scoreManager.AddScore();
+        
+    } 
 
 }

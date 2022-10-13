@@ -28,8 +28,8 @@ public class HealthController : MonoBehaviour
     }
     void Start()
     {
-        health = shipData.TotalHealth;
         isDestroyed = false;
+        SetHealth();
     }
 
     void Update()
@@ -38,6 +38,9 @@ public class HealthController : MonoBehaviour
             Die();
         
     }
+
+    public void SetHealth() => this.health = shipData.TotalHealth;
+
 
     public void Damage(int value)
     {

@@ -14,7 +14,6 @@ public class HealthBar : MonoBehaviour
         damageBar.fillAmount = (float)healthController.Health / shipData.TotalHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         damageBar.fillAmount = (float)healthController.Health / shipData.TotalHealth;
