@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls ths input and shooting of the player
+/// </summary>
 public class PlayerShoot : MonoBehaviour
 {
     [Header("Script References")]

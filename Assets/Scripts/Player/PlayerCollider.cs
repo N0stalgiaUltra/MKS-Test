@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manage all the collisions in the player object
+/// </summary>
 public class PlayerCollider : MonoBehaviour, ICollider
 {
+    [Header ("Script References")]
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private HealthController playerHealth;
     [SerializeField] private ShipData chaserData;

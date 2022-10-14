@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the Player Rotation
+/// </summary>
 public class PlayerRotation : MonoBehaviour
 {
-
+    [Header ("Rotation Speed")]
     [SerializeField] private float rotateSpeed; 
 
 
