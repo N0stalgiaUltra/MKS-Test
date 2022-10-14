@@ -104,14 +104,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 415cd1423764e6f48b9c3741f433df17, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &4327747266650412194
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 3085501514098740835, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
-  rotateSpeed: 3
   shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
 --- !u!114 &4327747266650412195
 MonoBehaviour:
@@ -158,7 +157,6 @@ MonoBehaviour:
   charType: 1
   shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
   shipDamage: {fileID: 4327747266650412193}
-  health: 0
   explosionAnimation: {fileID: 8879425611519450599, guid: 5adcb48bda75ea34d83fff8a8e44ece9, type: 3}
 --- !u!114 &4327747266650412204
 MonoBehaviour:
@@ -175,7 +173,6 @@ MonoBehaviour:
   enemyHealth: {fileID: 4327747266650412195}
   shipData: {fileID: 11400000, guid: 52adf8a14ac1b6f4f893a75408b1f2d7, type: 2}
   enemyType: 0
-  enemySpeed: 0
 --- !u!114 &4327747266650412193
 MonoBehaviour:
   m_ObjectHideFlags: 0
