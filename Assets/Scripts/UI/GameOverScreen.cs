@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Game Over Screen script, controls the logic behind game over.
+/// </summary>
 public class GameOverScreen : MonoBehaviour
 {
+    [Header("Script Reference")]
     [SerializeField] private ScoreManager scoreManager;
 
+    [Header ("TextMesh References")]
     [SerializeField] private TextMeshProUGUI scoreText;   
     [SerializeField] private TextMeshProUGUI highScoreText;
 
+    [Header ("Buttons References")]
     [SerializeField] private Button playAgainButton;
     [SerializeField] private Button mainMenuButton;
 

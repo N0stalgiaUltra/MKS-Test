@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Controls the Session Time logic inside the "Settings Menu"
+/// </summary>
 public class SessionTimeUI : MonoBehaviour
 {
+    [Header ("UI References")]
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private Button addButton;
     [SerializeField] private Button subButton;

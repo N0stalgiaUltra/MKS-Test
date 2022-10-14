@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the logic behind the bullet, moving the bullet and reseting his velocity after being inactive
+/// </summary>
+
 [RequireComponent(typeof (Rigidbody2D))]
 public class BulletLogic : MonoBehaviour
 {

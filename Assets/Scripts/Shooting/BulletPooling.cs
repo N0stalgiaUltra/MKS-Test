@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the Object Pool Pattern for instantiating bullets in the scene
+/// </summary>
 public class BulletPooling : MonoBehaviour
 {
     [Header ("Script References")]

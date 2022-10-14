@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Main Menu Script, Holds references to the play and settings buttons.
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
+    [Header ("UI References")]
     [SerializeField] private Button playButton;
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button cancelButton;
@@ -17,12 +21,6 @@ public class MainMenu : MonoBehaviour
         playButton.onClick.AddListener(Play);
         settingsButton.onClick.AddListener(Settings);
         cancelButton.onClick.AddListener(Settings);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void Play()

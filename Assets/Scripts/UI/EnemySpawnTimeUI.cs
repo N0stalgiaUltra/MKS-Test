@@ -4,9 +4,12 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-
+/// <summary>
+/// Controls the Enemy Spawn Time logic inside the "Settings Menu"
+/// </summary>
 public class EnemySpawnTimeUI : MonoBehaviour
 {
+    [Header ("UI References")]
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private Button addButton;
     [SerializeField] private Button subButton;

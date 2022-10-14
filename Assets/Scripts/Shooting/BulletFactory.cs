@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the Abstract Factory Pattern for the bullet
+/// </summary>
 public class BulletFactory : MonoBehaviour, IGenericFactory<BulletLogic>
 {
     [Header ("Prefab Reference")]

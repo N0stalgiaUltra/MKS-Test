@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Responsible for managing the bullet collision
+/// </summary>
 public class BulletCollider : MonoBehaviour, ICollider
 {
     private BulletPooling bulletPooling;
