@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Responsible for controlling all the ships´s health
+/// </summary>
 public class HealthController : MonoBehaviour
 {
     public enum CharType
@@ -9,17 +12,20 @@ public class HealthController : MonoBehaviour
         PLAYER,
         ENEMY
     }
-
+    [Header ("Type of Ship")]
     [SerializeField] private CharType charType;
+    
+    [Header ("Script References")]
     [SerializeField] private ShipData shipData;
     [SerializeField] private ShipDamage shipDamage;
-    [SerializeField] private int health;
 
+    [Header ("Other References")]
     [SerializeField] private GameObject explosionAnimation;
 
     private GameManager gameManager;
     private EnemyPooling enemyPooling;
     private bool isDestroyed;
+    private int health;
 
     private void Awake()
     {

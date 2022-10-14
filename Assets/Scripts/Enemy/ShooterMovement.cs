@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Contols the movement of the Shooter Type of enemy, inherits from Enemy Movement
+/// </summary>
 public class ShooterMovement : EnemyMovement
 {
-    [SerializeField] private float maxDistance;
+    [Header ("Script References")]
     [SerializeField] private ShipData shipData;
     [SerializeField] private EnemyShoot enemyShoot;
+
+    [Header ("Max Distance")]
+    [SerializeField] private float maxDistance;
+
     private float speed;
 
     private void Awake()

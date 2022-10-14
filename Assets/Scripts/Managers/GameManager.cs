@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Responsible for controlling the game´s cycles
+/// </summary>
 public class GameManager : MonoBehaviour
 {
+    [Header ("Script References")]
     [SerializeField] private ScoreManager scoreManager;
-    [SerializeField] private float gameSessionTimer;
+    [Header ("Game Over Screen")]
     [SerializeField] private GameObject gameOverScreen;
+    private float gameSessionTimer;
+
     void Start()
     {
         Time.timeScale = 1;

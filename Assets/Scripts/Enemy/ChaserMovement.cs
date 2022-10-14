@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the movement for the Chaser type of enemy. Inherits from Enemy Movement
+/// </summary>
 public class ChaserMovement : EnemyMovement
 {
     [SerializeField] private ShipData shipData;

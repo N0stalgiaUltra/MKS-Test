@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls all the enemy collisions
+/// </summary>
 public class EnemyCollider : MonoBehaviour, ICollider
 {
     public enum EnemyType
@@ -9,8 +12,10 @@ public class EnemyCollider : MonoBehaviour, ICollider
         CHASER,
         SHOOTER
     }
+    [Header ("Script References")]
     [SerializeField] private HealthController enemyHealth;
     [SerializeField] private ShipData shipData;
+    [Header ("Enemy Type")]
     [SerializeField] private EnemyType enemyType;
     private ChaserMovement chaserMovement;
     private ShooterMovement shooterMovement;

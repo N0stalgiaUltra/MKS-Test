@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Responsible for controlling the score inside the game
+/// </summary>
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private int score;
-    [SerializeField] private int highScore;
-
+    private int score;
+    private int highScore;
+    
+    [Header ("TextMesh References")]
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
     void Start()

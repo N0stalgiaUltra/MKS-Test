@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Responsible for controlling the sprites when a ship is damaged
+/// </summary>
 public class ShipDamage : MonoBehaviour
 {
     [Header ("Script References")]

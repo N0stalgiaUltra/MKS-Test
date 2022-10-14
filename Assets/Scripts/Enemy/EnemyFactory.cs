@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Generic Factory Pattern for the Enemy type
+/// </summary>
 public class EnemyFactory : MonoBehaviour, IGenericFactory<GameObject>
 {
     [SerializeField] private GameObject[] enemies = new GameObject[2]; 

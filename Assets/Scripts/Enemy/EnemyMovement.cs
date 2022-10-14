@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Abstract class for enemy movement
+/// </summary>
 public abstract class EnemyMovement : MonoBehaviour
 {
     [SerializeField] protected Transform playerTransform;

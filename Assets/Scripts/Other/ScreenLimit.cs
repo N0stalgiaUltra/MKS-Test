@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Responsible for not letting the player get out of bounds
+/// </summary>
 public class ScreenLimit : MonoBehaviour
 {
+    [Header ("Player Transform")]
     [SerializeField] private Transform playerTransform;
+    [Header ("Screen Limits")]
     [SerializeField] private Transform leftPoint;
     [SerializeField] private Transform rightPoint;
     [SerializeField] private Transform downPoint;

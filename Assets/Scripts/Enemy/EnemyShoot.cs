@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the Shoot of the Shooter type of enemy
+/// </summary>
 public class EnemyShoot : MonoBehaviour
 {
-    [SerializeField] private BulletPooling bulletPool;
+    private BulletPooling bulletPool;
+
+    [Header("Bullet Spawn")]
     [SerializeField] private Transform bulletSpawn;
+
+    [Header ("Fire Rate")]
     [SerializeField] private float fireRate;
     private float nextFire;
     private void Awake()
