@@ -66,6 +66,7 @@ public class HealthController : MonoBehaviour
         else
         {
             enemyPooling.ReplenishQueue(this.gameObject);
+            isDestroyed = false;
         }
 
     }

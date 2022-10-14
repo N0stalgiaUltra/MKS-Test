@@ -38,7 +38,7 @@ public class BulletPooling : MonoBehaviour
 
     public void MultipleBulletSpawn(Transform[] bulletSpawns, bool isPlayer) 
     { 
-        if(bulletQueue.Count != 0)
+        if(bulletQueue.Count >= 3)
         {
             for (int i = 0; i < bulletSpawns.Length; i++)
                 SingleBulletSpawn(bulletSpawns[i], isPlayer);

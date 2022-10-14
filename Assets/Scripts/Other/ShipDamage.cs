@@ -12,20 +12,18 @@ public class ShipDamage : MonoBehaviour
     [Header ("Component References")]
     [SerializeField] private SpriteRenderer shipSR;
 
-    void Start()
+    void OnEnable()
     {
         shipSR.sprite = shipSpriteData.sprites[0];
     }
 
     void Update()
     {
-
         if(healthController.Health < 50)
             shipSR.sprite = shipSpriteData.sprites[1];
 
         if (healthController.Health <= 25)
             shipSR.sprite = shipSpriteData.sprites[2];
-
     }
 
     public void InstantiateDestroyedShip() => Instantiate(destroyedShip, transform.position, transform.rotation).Setup(shipSpriteData.damagedSprite);

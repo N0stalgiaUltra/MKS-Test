@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletFactory: {fileID: 572594379}
-  bulletsQuantity: 30
+  bulletsQuantity: 50
 --- !u!4 &572594381
 Transform:
   m_ObjectHideFlags: 0
