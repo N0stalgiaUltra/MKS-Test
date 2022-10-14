@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerRotation : MonoBehaviour
 {
 
-    [SerializeField] private float rotateSpeed; // TODO: hide in inspector, make field in ShipData
+    [SerializeField] private float rotateSpeed; 
 
 
     void Update()

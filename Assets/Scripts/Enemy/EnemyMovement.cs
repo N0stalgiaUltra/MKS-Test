@@ -6,7 +6,6 @@ public abstract class EnemyMovement : MonoBehaviour
 {
     [SerializeField] protected Transform playerTransform;
 
-    [SerializeField] protected float rotateSpeed;
     void Start()
     {
         playerTransform = GameObject.Find("PlayerShip").GetComponent<Transform>();
