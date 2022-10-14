@@ -7,6 +7,7 @@ public class BulletLogic : MonoBehaviour
 {
     [Header ("Script References")]
     [SerializeField] private BulletData data;
+    [Header ("Component References")]
     [SerializeField] private Rigidbody2D bulletRB;
 
     private int damage;

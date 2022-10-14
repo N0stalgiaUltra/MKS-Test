@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletFactory : MonoBehaviour, IGenericFactory<BulletLogic>
 {
+    [Header ("Prefab Reference")]
     [SerializeField] private BulletLogic bulletPrefab;
     public BulletLogic GetNewInstance()
     {

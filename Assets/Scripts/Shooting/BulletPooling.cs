@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class BulletPooling : MonoBehaviour
 {
+    [Header ("Script References")]
     [SerializeField] private BulletFactory bulletFactory;
+
+    [Header("Queue Quantity")]
     [SerializeField] private int bulletsQuantity;
     [SerializeField] private Queue<BulletLogic> bulletQueue = new Queue<BulletLogic>();
 
