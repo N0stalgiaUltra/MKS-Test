@@ -12259,21 +12259,5 @@ PrefabInstance:
       propertyPath: bulletPool
       value: 
       objectReference: {fileID: 572594380}
-    - target: {fileID: 3085501514098740847, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: 6190580482a78d34e85c0b362a89f33c, type: 2}
-    - target: {fileID: 3085501515958285696, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.154
-      objectReference: {fileID: 0}
-    - target: {fileID: 3085501515962306668, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.162
-      objectReference: {fileID: 0}
-    - target: {fileID: 3085501515962306668, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.387
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0adcc228d3edeb5489aca86fa2376a22, type: 3}

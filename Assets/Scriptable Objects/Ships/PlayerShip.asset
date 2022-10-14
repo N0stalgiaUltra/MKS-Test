@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalHealth: 200
   Speed: 2.5
+  CollisionDamage: 0
